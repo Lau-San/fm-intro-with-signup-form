@@ -16,25 +16,257 @@ $grayish-blue: hsl(246, 25%, 77%);
 
 // Breakpoints
 // ----------
-// TODO: Make this thing responsive
+
+$tablet: 1024px;
+$mobile: 768px;
 
 // Normalizing
 // ----------
-// TODO: Normalize
 
 :root {
 	font-size: 16px;
 }
 
+*,
+*::before,
+*::after {
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1em;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	font-size: inherit;
+}
+
 // Styling
 // ----------
 
+body {
+	background: url(/assets/images/bg-intro-desktop.png), $red;
+	color: #fff;
+	font-family: Poppins, sans-serif;
+
+	@media (max-width: $mobile) {
+		background-image: url(/assets/images/bg-intro-mobile.png);
+	}
+}
+
+input {
+	border-radius: 0.3em;
+	font-family: inherit;
+	font-weight: 600;
+	width: 100%;
+}
+
 // Layout
-// TODO: Layout
+
+main {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	width: clamp(900px, 80%, 1100px);
+	overflow: scroll;
+	transition: width 0.5s ease;
+	overflow: visible;
+
+	@media (max-width: $tablet) {
+		display: block;
+		margin: 5rem auto;
+		width: clamp(320px, 60%, 900px);
+	}
+}
+
+.box {
+	border-radius: 0.6rem;
+	box-shadow: 0 8px 0 rgba(#000, 0.15);
+}
 
 // Intro
-// TODO: Style intro
+
+.intro {
+	align-self: center;
+	padding-right: 3rem;
+
+	@media (max-width: $tablet) {
+		padding: 0;
+	}
+
+	h1 {
+		font-size: 3rem;
+		font-weight: 700;
+		letter-spacing: -0.02em;
+		width: 90%;
+		transition: width 0.5s ease;
+
+		@media (max-width: $tablet) {
+			text-align: center;
+			margin: 0 auto;
+		}
+
+		@media (max-width: $mobile) {
+			font-size: 1.8rem;
+		}
+	}
+
+	p {
+		font-size: 1rem;
+		line-height: 1.4em;
+		margin-top: 1.5rem;
+
+		@media (max-width: $tablet) {
+			text-align: center;
+			margin: 1.5rem auto;
+		}
+	}
+}
 
 // Form
-// TODO: Style form
-// TODO: Add hover and active states
+
+.free-trial {
+	background: $blue;
+	text-align: center;
+	padding: 1.3em;
+
+	@media (max-width: $tablet) {
+		padding: 1.4em;
+		margin-top: 4rem;
+	}
+
+	@media (max-width: $mobile) {
+		line-height: 1.6em;
+		padding: 1.5em 2.5em;
+	}
+
+	span {
+		font-weight: 700;
+	}
+}
+
+.sign-up-form {
+	background: #fff;
+	color: $grayish-blue;
+	padding: 2.2rem;
+	padding-bottom: 2.8rem;
+	margin-top: 1.5rem;
+
+	@media (max-width: $mobile) {
+		padding: 1.8rem;
+	}
+
+	p {
+		font-size: 0.8rem;
+		text-align: center;
+		margin-top: 1rem;
+
+		@media (max-width: $mobile) {
+			font-size: .7rem;
+			line-height: 2em;
+			width: 90%;
+			margin: .8rem auto 0 auto;
+		}
+	}
+
+	a {
+		color: $red;
+		font-weight: 700;
+		text-decoration: none;
+	}
+}
+
+.field {
+	margin-top: 1rem;
+
+	input {
+		border: 1px solid $grayish-blue;
+		color: $dark-blue;
+		text-indent: 1rem;
+		padding: 1rem;
+		transition: border-color 1s ease;
+
+		&::placeholder {
+			color: $dark-blue;
+			opacity: 0.6;
+		}
+
+		&:focus {
+			border: 1px solid $dark-blue;
+			outline: none;
+		}
+
+		@media (max-width: $tablet) {
+			font-size: 0.9rem;
+			text-indent: 0.5rem;
+
+			&:focus {
+				border: 3px solid rgba($dark-blue, .6);
+			}
+		}
+	}
+
+	img {
+		display: none;
+		opacity: 0;
+		width: 25px;
+		position: absolute;
+		top: 50%;
+		right: 1.5rem;
+		transform: translateY(-50%);
+		transition: opacity 5s ease-out;
+	}
+
+	&:first-child {
+		margin: 0;
+	}
+
+	&.invalid {
+		position: relative;
+
+		input {
+			border: 2px solid $red;
+		}
+
+		img {
+			display: block;
+			opacity: 1;
+		}
+	}
+}
+
+.sign-up-form .warning {
+	color: $red;
+	font-style: italic;
+	text-align: right;
+	margin: 0.5rem 0;
+	animation: fade-in 0.5s ease-out backwards;
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+}
+
+.sign-up-btn {
+	background: $green;
+	border: none;
+	box-shadow: inset 0 -4px 0 rgba(#000, 0.1);
+	color: #fff;
+	padding: 1.3rem;
+	margin-top: 1rem;
+	cursor: pointer;
+	transition: background-color 0.5s ease;
+
+	&:hover {
+		background: hsl(154, 59%, 70%);
+	}
+}

@@ -2,39 +2,69 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="./assets/images/favicon-32x32.png" />
 
   <title>Frontend Mentor | Intro component with sign up form</title>
 
-  <link rel="stylesheet" href="./assets/styles/main.css">
+  <link rel="stylesheet" href="./dist/main.css" />
 
   <script defer src="./assets/scripts/script.js"></script>
 </head>
 
 <body>
+  <main>
+    <div class="container">
+      <div class="intro">
+        <h1>Learn to code by watching others</h1>
+        <p>
+          See how experienced developers solve problems in
+          real-time. Watching scripted tutorials is great, but
+          understanding how developers think is invaluable.
+        </p>
+      </div>
 
-  <!-- TODO: Site structure -->
+      <div>
+        <div class="free-trial box">
+          <span>Try it free 7 days</span> then $20/mo. thereafter
+        </div>
 
-  Learn to code by watching others
+        <form class="sign-up-form box">
+          <div class="field">
+            <input type="text" name="First Name" placeholder="First Name" />
+            <img src="./assets/images/icon-error.svg" alt="Error" />
+          </div>
 
-  See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
-  but understanding how developers think is invaluable.
+          <div class="field">
+            <input type="text" name="Last Name" placeholder="Last Name" />
+            <img src="./assets/images/icon-error.svg" alt="Error" />
+          </div>
 
-  Try it free 7 days then $20/mo. thereafter
+          <div class="field">
+            <input type="text" name="Email" placeholder="Email Address" />
+            <img src="./assets/images/icon-error.svg" alt="Error" />
+          </div>
 
-  First Name
-  Last Name
-  Email Address
-  Password
+          <div class="field">
+            <input type="password" name="Password" placeholder="Password" />
+            <img src="./assets/images/icon-error.svg" alt="Error" />
+          </div>
 
-  Claim your free trial
+          <input id="sign-up-btn" class="sign-up-btn" type="submit"
+            value="CLAIM YOUR FREE TRIAL" />
 
-  By clicking the button, you are agreeing to our Terms and Services
-
+          <p>
+            By clicking the button, you are agreeing to our
+            <a href="#">Terms and Services</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </main>
 </body>
 
 </html>
