@@ -38,9 +38,8 @@ Desktop - Validation error
 
 ### Links
 
-<!-- TODO Solution URL -->
-<!-- - Solution URL: [Add solution URL here](https://your-solution-url.com) -->
-- Live Site URL: [GitHub Pages](https://lau-san.github.io/fm-intro-with-signup-form/)
+-   [View solution in Frontend Mentor](https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1/hub/responsive-intro-with-signup-form-with-css-grid-VF-VA3-hgi)
+-   [Go to Live Demo](https://lau-san.github.io/fm-intro-with-signup-form/)
 
 ## My process
 
