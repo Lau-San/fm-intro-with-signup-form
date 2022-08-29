@@ -40,8 +40,7 @@ Desktop - Validation error
 
 <!-- TODO Solution URL -->
 <!-- - Solution URL: [Add solution URL here](https://your-solution-url.com) -->
-<!-- TODO Live Site URL -->
-<!-- - Live Site URL: [GitHub Pages](https://your-live-site-url.com) -->
+- Live Site URL: [GitHub Pages](https://lau-san.github.io/fm-intro-with-signup-form/)
 
 ## My process
 
