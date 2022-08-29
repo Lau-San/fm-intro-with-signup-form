@@ -46,12 +46,12 @@ a {
 // ----------
 
 body {
-	background: url(/assets/images/bg-intro-desktop.png), $red;
+	background: url(../assets/images/bg-intro-desktop.png), $red;
 	color: #fff;
 	font-family: Poppins, sans-serif;
 
 	@media (max-width: $mobile) {
-		background-image: url(/assets/images/bg-intro-mobile.png);
+		background-image: url(../assets/images/bg-intro-mobile.png);
 	}
 }
 
